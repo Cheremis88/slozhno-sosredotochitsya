@@ -135,6 +135,10 @@
   font-weight: 700;
 }
 
+.text-decor {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
 .images {
   display: grid;
   gap: 10px;
@@ -148,15 +152,11 @@
 
 .image_row {
   grid-row: span 2;
-  height: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 } */
 
 .footer {
   place-content: center;
-}
-
-.footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
 }

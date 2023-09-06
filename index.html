@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light">
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/globals.css">
@@ -14,7 +18,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <span class="header__dark-decore">
+      <span class="header__dark-decore" aria-hidden="true">
         Rec
       </span>
       <nav class="header__theme-menu">
@@ -64,7 +68,7 @@
             Особенно сложно сосредоточиться, когда задач много и все они — важные.
             Где же легендарная многозадачность, когда она так нужна вам
             (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует.
-            Исследователи выяснили, что мозгу тяжело концентрироваться даже на двух делах одновременно.
+            Исследователи <span class="text-decor">выяснили</span>, что мозгу тяжело концентрироваться даже на двух делах одновременно.
             А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет
             кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.
           </p>
@@ -151,7 +155,7 @@
         <article class="article">
           <p class="title-decor title-decor_normal">Прогуляйтесь</p>
           <p class="article__text">
-            Или даже пробегитесь. Лучше найти парк или лес: один эксперимент показал,
+            Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <span class="text-decor">показал</span>,
             что созерцание природы повышает концентрацию, в то время как после просмотра
             городских пейзажей она наоборот понижается. Можно совместить прогулку с 
             физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода 
@@ -182,16 +186,36 @@
       <!-- Images section -->
       
       <section class="images">
-        <img src="./images/sunset.png" alt="Чайки летают на фоне горного заката" class="image_column">
-        <img src="./images/ice-cream.png" alt="Весёлые шарики мороженого в жёлтой тарелке" class="image_row">
-        <img src="./images/tape.png" alt="Аудиокассета с декоративными элементами" class="image_row">
-        <img src="./images/books.png" alt="Чашка на стопке книг, которые надо прочитать" class="image">
-        <img src="./images/street.png" alt="Рисунок переулка в сиреневых тонах" class="image_column">
+        <img class="image_column"
+          loading="lazy"
+          src="./images/sunset.png"
+          alt="Чайки летают на фоне горного заката"
+        />
+        <img class="image_row"
+          loading="lazy"
+          src="./images/ice-cream.png"
+          alt="Весёлые шарики мороженого в жёлтой тарелке"
+        />
+        <img class="image_row"
+          loading="lazy"
+          src="./images/tape.png"
+          alt="Аудиокассета с декоративными элементами"
+        />
+        <img class="image"
+          loading="lazy"
+          src="./images/books.png"
+          alt="Чашка на стопке книг, которые надо прочитать"
+        />
+        <img class="image_column"
+          loading="lazy"
+          src="./images/street.png"
+          alt="Рисунок переулка в сиреневых тонах"
+        />
       </section>
     </main>
     
     <footer class="footer decorated-zone">
-      <h3 class="footer__title page__title">Focus</h3>
+      <h3 class="page__title text-decor">Focus</h3>
     </footer>
     <!-- <script src="./scripts/script.js"></script> -->
   </body>
