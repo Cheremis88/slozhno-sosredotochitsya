@@ -19,3 +19,7 @@
 .theme_dark .title-decor {
   color: var(--article-title-color);
 }
+
+.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}

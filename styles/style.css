@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: url(../images/cover-image-dark.png);
   background-color: var(--bcg-color);
   background-position: center;
@@ -92,8 +89,18 @@
   padding-block-end: 4px;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid currentColor;
+}
+
 .header__theme-menu-button_active {
   border: 1px solid currentColor;
+  pointer-events: none;
 }
 
 .header__title {
@@ -147,6 +154,19 @@
 
 .text-decor {
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.article__link {
+  text-decoration: none;
+}
+
+.article__link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.article__link:focus-visible {
+  outline: none;
+  border: 1px solid currentColor;
 }
 
 .images {
@@ -255,6 +275,10 @@
   .title-decor,
   .section__title {
     color: var(--text-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.40);
   }
 }
 
