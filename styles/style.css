@@ -3,13 +3,14 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: url(../images/cover-image-dark.png);
+  background-color: var(--bcg-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--main-font-family, monospace);
   font-size: var(--main-font-size, 18px);
   font-weight: 400;
-  color: var(--text-color, #F1B2CE);
+  color: var(--text-color);
   line-height: var(--line-height, 1.3);
 }
 
@@ -18,6 +19,7 @@
   display: grid;
   position: relative;
   padding: var(--page-padding);
+  color: var(--accent-color);
 }
 
 .decorated-zone::before {
@@ -25,8 +27,8 @@
   position: absolute;
   block-size: 25px;
   inline-size: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
   inset-block-start: var(--page-padding);
   inset-inline-end: var(--page-padding);
 }
@@ -36,8 +38,8 @@
   position: absolute;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   inset-inline-start: var(--page-padding);
   inset-block-end: var(--page-padding);
 }
@@ -72,7 +74,6 @@
 
 .header__theme-menu {
   justify-self: end;
-  color: var(--accent-color);
   line-height: 1;
 }
 
@@ -113,6 +114,11 @@
   font-weight: 700;
   background-color: var(--accent-color);
   margin-block-end: 10px;
+}
+
+.title-decor_main {
+  inline-size: max(355px, 50%);
+  justify-self: end;
 }
 
 .section > .title-decor {
@@ -172,8 +178,7 @@
   }
 
   .title-decor_main {
-    inline-size: 50%;
-    justify-self: end;
+    inline-size: min(50%, 492px);
   }
 
   .section {
@@ -228,5 +233,34 @@
   .section_title-top .article {
     grid-row-start: 2;
     grid-column: initial;
+  }
+}
+
+/* Предпочтение светлой темы */
+
+@media (prefers-color-scheme: light) {
+  .page {
+    --bcg-color: #FFF1F7;
+    --page-title-color: #FFC2E6;
+    --text-color: #353430;
+    --accent-color: #FF8DCB;
+    background-image: url(../images/cover-image-light.png);
+  }
+  
+  .header__dark-decore {
+    visibility: hidden;
+  }
+  
+  .decorated-zone,
+  .title-decor,
+  .section__title {
+    color: var(--text-color);
+  }
+}
+
+@media (prefers-color-scheme: light) and (orientation: landscape) {
+  .header__title,
+  .footer .text-decor {
+    --accent-color: #FF0070;
   }
 }

@@ -1,7 +1,3 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
   --page-padding: 10px;
   --main-font-family: 'IBM Plex mono';
@@ -9,6 +5,7 @@
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --article-title-color: #000028;
+  --bcg-color: #000028;
   --page-title-color: #DB00FF;
   --line-height: 1.3;
 }
