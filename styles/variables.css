@@ -1,6 +1,6 @@
 :root {
   --page-padding: 10px;
-  --main-font-family: 'IBM Plex mono';
+  --main-font-family: 'IBM Plex mono', monospace;
   --main-font-size: 18px;
   --accent-color: #FF0070;
   --text-color: #F1B2CE;

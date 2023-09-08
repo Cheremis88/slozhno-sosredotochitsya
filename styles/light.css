@@ -26,3 +26,36 @@
     --accent-color: #FF0070;
   }
 }
+
+/* Предпочтение светлой темы */
+
+@media (prefers-color-scheme: light) {
+  .page {
+    --bcg-color: #FFF1F7;
+    --page-title-color: #FFC2E6;
+    --text-color: #353430;
+    --accent-color: #FF8DCB;
+    background-image: url(../images/cover-image-light.png);
+  }
+  
+  .header__dark-decore {
+    visibility: hidden;
+  }
+  
+  .decorated-zone,
+  .title-decor,
+  .section__title {
+    color: var(--text-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.40);
+  }
+}
+
+@media (prefers-color-scheme: light) and (orientation: landscape) {
+  .header__title,
+  .footer .text-decor {
+    --accent-color: #FF0070;
+  }
+}
