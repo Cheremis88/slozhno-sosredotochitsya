@@ -12,7 +12,7 @@
 }
 
 .decorated-zone {
-  block-size: max(600px, 100vh);
+  block-size: max(600px, 100dvh); /* test */
   display: grid;
   position: relative;
   padding: var(--page-padding);
@@ -185,7 +185,7 @@
   place-content: center;
 }
 
-@media (width >= 768px) {
+@media (width >= 720px) {  /* test */
 
   .page {
     --page-padding: 20px;
